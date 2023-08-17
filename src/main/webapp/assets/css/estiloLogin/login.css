@@ -1,0 +1,226 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Urbanist', sans-serif;
+    overflow-x: hidden;
+}
+
+section h2 {
+  position: relative;
+  padding: 4rem;
+  margin: 6rem 0 4rem 12rem;
+}
+
+section h2::after {
+  background-color: #1048c2;
+  bottom: 0;
+  color: #000;
+  content: "";
+  height: 2px;
+  left: 40px;
+  margin-bottom: 4rem;
+  position: absolute;
+  right: 0;
+  top: 20;
+  width: 80px;
+  background: linear-gradient(
+    -45deg,
+    rgba(242, 242, 244, 1) 0%,
+    rgba(73, 173, 200, 1) 59%
+  );
+}
+
+
+.hero {
+  min-height: 100vh;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.hero-text {
+  display: flex;
+  max-width: 1366px;
+  margin: 1rem auto 0;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+.hero-text img{
+    width: 150%;
+    height: 130%;
+}
+.hero-text button{
+  border:none;
+  background: #001256;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+.hero-text button:hover{
+  background: #03bb85;
+  border:1px solid#fff;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-78deg, #002156 50%, #03bb85 50%);
+
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+
+
+.log{
+    background-color: #f8f8f8;
+    position: relative;
+    border-radius: 50px;
+    z-index:2;
+}
+
+
+@media (min-width: 320px) and (max-width: 425px){
+  .log {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 380px;
+    max-height: 390px;
+  }
+  .inputbox{
+    width: 220px;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 2560px){
+  .log {
+    min-width: 350px;
+    max-width: 400px;
+    min-height: 460px;
+    max-height: 580px;
+  }
+  .inputbox{
+    width: 320px;
+    margin-top: 60px;
+  }
+}
+
+form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    z-index: 10;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+form h1{
+    color: #001256;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+}
+.inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222222;
+    font-size: 1em;
+    letter-spacing: 0.050em;
+    z-index: 10;
+    text-align: center;
+}
+input[type="submit"]{
+    font-size: 20px;
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: #03bb85;
+    padding: 5px;
+    margin-top: 15%;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #f8f8f8;
+}
+input[type="submit"]:active{
+    background: linear-gradient(90deg,#03bb85,#001256);
+    opacity: 0.8;
+    color: #ffffff;
+}
+.inputbox span{
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+    color: #001256;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.85em;
+}
+.inputbox i{
+    position: absolute;
+    left: 0;
+    margin-left: 4%;
+    bottom: 0;
+    width: 90%;
+    height: 2px;
+    background-color: #03bb85;
+    z-index: 9;
+
+}
+.inputbox input:valid ~i,
+.inputbox input:focus~{
+    height: 44px;
+}

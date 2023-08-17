@@ -1,0 +1,164 @@
+ @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Urbanist', sans-serif;
+	}
+	body{
+		
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		font-family: 'Urbanist', sans-serif;
+		width: 100%;
+		padding-top: 0;
+		padding-left: 0;
+		position: fixed;
+		top: 0;left: 0;
+		z-index: 4;
+		background-color: #002156;
+ 		box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+	}
+	.container{
+		width: 100%;
+		background-color: #ffffff;
+		max-width: 1200px;
+		margin: 0px auto;
+	}
+	.container .btn-menu{
+		float: left;
+		margin-left: 0px;
+		line-height: 80px;
+	}
+	.container .logo{
+		float: left;
+	}
+	.container .btn-menu label{
+		  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  left: 10px; 
+  top: 0;
+  bottom: 0;
+  margin: auto;
+	}
+	.container .menu {
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu img{
+			margin-top: 7px;
+			margin-bottom:20px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+		z-index: 4;
+	}
+	.perfil{
+	}
+	.perfil i{
+			font-size: 250%;
+			color: #ffffff;
+		}
+		.perfil h4{
+			color: #ffffff;
+		}
+	.container-menu{
+		position: absolute;
+		z-index: 4;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background:#002156;
+		height: 100vh;
+		z-index: 5;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(20%);
+	}
+	.cont-menu nav{
+		transform: translateY(10%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #c7c7c7;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #c7c7c7;
+		background: #031430 ;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+	@media (min-width: 200px) and (max-width: 768px) {
+		header{
+			height: 40px;
+		}
+		.container .menu img{
+			width: 30px;
+			height: 30px;
+		}
+			.container .btn-menu{
+			line-height: 40px;
+		}
+		.container .menu{
+			line-height: 40px;
+		}
+	}
+	@media (min-width: 769px) and (max-width: 2560px) {
+		header{
+			height: 60px;
+		}
+		.container .menu img{
+			width: 40px;
+			height: 40px;
+		}
+		.container .menu{
+			line-height: 60px;
+		}
+		.container .btn-menu{
+			line-height:60px;
+		}
+
+	}
+	/*Fin de Menù lateral*/
